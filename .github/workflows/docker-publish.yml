@@ -1,0 +1,35 @@
+name: Nodejs CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14.x'
+    - name: Build frontend
+      env:
+         CI: ""
+      run: |
+          npm i
+          npm run build
+    - name: Build the Docker image
+      run: docker build -t us-west2-docker.pkg.dev/prime-chess-368907/docker-repo/eregister-frontend --file docker/Dockerfile .
+    - name: Log in to Artifact Registry
+      uses: docker/login-action@v2
+      with:
+        registry: 'https://us-west2-docker.pkg.dev'
+        username: '_json_key'
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Push the Docker image
+      run: docker push us-west2-docker.pkg.dev/prime-chess-368907/docker-repo/eregister-frontend
