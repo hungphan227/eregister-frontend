@@ -19,6 +19,7 @@ class WebSocketHandler extends React.Component {
         service.getClientSessionId()
 
         this.openWebSocketEventHandler = (event) => {
+            // isWebSockerOpened is a typo. However, because currently there is no case in which OPEN_WEB_SOCKET event is sent twice so it is no need to fix
             if (!this.isWebSockerOpened) {
                 this.createWebSocket()
                 this.isWebSocketOpened = true
