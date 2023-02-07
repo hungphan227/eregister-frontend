@@ -50,7 +50,7 @@ class Popup extends React.Component {
                         <div className='limit'>{data.teacher}</div>
                         <div className='teacher space'>Limit</div>
                         <div className='limit'>{data.limit}</div>
-                        <div className='teacher space'>Remaining Slot</div>
+                        <div className='teacher space'>Remaining Spots</div>
                         <div className='limit'>{data.remainingSlots}</div>
                         <div className='teacher space'>Intro</div>
                         <div className='limit'>{data.description}</div>

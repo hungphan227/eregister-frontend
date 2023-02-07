@@ -75,7 +75,7 @@ class CourseRegistration extends React.Component {
                 {
                     this.state.courses.map((course, idx) => {
                         return(
-                            <InformationCard data={course} handleClickButton={()=>this.handleClickBook(course)} key={idx} />
+                            <InformationCard data={course} buttonName="Book" handleClickButton={()=>this.handleClickBook(course)} key={idx} />
                         )
                     })
                 }

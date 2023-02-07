@@ -42,6 +42,20 @@ addMethod(METHOD_TYPE.GET, "/eregister-service/courses", async (req, res) => {
   res.status(200).send(result)
 })
 
+addMethod(METHOD_TYPE.GET, "/eregister-service/course/get-courses-of-student", async (req, res) => {
+  const result = [
+    {
+      id: 1,
+      courseNumber: "DSA",
+      courseName: "Data Structure and Algorithms",
+      limit: 1,
+      teacher: "Edsger Dijkstra",
+      description: "asdsa asdoasd fdjdjf"
+    }
+  ]
+  res.status(200).send(result)
+})
+
 addMethod(METHOD_TYPE.GET, "/eregister-service/course/:courseId", async (req, res) => {
   const result = {
     id: 1,

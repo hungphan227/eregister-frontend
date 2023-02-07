@@ -1,6 +1,7 @@
 const SCREEN_NAMES = {
     SCREEN_LOGIN: '/login',
-    SCREEN_COURSE_REGISTRATION: '/course-registration'
+    SCREEN_COURSE_REGISTRATION: '/course-registration',
+    SCREEN_MY_COURSES: '/my-courses'
 }
 
 const COMMANDS = {
