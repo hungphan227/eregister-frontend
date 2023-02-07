@@ -10,17 +10,17 @@ import { SCREEN_NAMES } from '../constants/Constants'
 export const history = createBrowserHistory();
 
 class Routes extends React.Component {
-    render() {
-        return(
-            <Router history={history}>
-                <Switch>
-                    <Route exact path={SCREEN_NAMES.SCREEN_LOGIN} component={Login} />
-                    <Route exact path={SCREEN_NAMES.SCREEN_COURSE_REGISTRATION} component={CourseRegistration} />
-                    <Route exact path={SCREEN_NAMES.SCREEN_MY_COURSES} component={MyCourses} />
-                </Switch>
-            </Router>
-        )
-    }
+  render() {
+    return (
+      <Router history={history}>
+        <Switch>
+          <Route exact path={SCREEN_NAMES.SCREEN_LOGIN} component={Login} />
+          <Route exact path={SCREEN_NAMES.SCREEN_COURSE_REGISTRATION} component={CourseRegistration} />
+          <Route exact path={SCREEN_NAMES.SCREEN_MY_COURSES} component={MyCourses} />
+        </Switch>
+      </Router>
+    )
+  }
 }
 
 export default Routes
