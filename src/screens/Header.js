@@ -1,5 +1,4 @@
 import React from 'react'
-import eregister from '../assets/images/eregister.png'
 import { Logout32 } from '@carbon/icons-react';
 import service from '../service/Service';
 import { history } from '../routes/Routes'
@@ -22,7 +21,7 @@ class Header extends React.Component {
   render() {
     return(
       <div className='header'>
-        <img src={eregister} alt='logo' className='header-logo' onClick={this.handleClickEregisterLogo} />
+        <img src='images/eregister.png' alt='logo' className='header-logo' onClick={this.handleClickEregisterLogo} />
         <div className='header-button' onClick={this.handleClickMyCourses} >My Lessons</div>
         <div className='header-button'>Find Teacher</div>
         <div className='header-button'>Messages</div>

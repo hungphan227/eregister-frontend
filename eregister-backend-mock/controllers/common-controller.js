@@ -36,7 +36,8 @@ addMethod(METHOD_TYPE.GET, "/eregister-service/courses", async (req, res) => {
       limit: 1,
       remainingSlots: 1,
       teacher: "Edsger Dijkstra",
-      description: "asdsa asdoasd fdjdjf"
+      description: "asdsa asdoasd fdjdjf",
+      image: "data-structure-and-algorithm.png"
     }
   ]
   res.status(200).send(result)
@@ -50,7 +51,8 @@ addMethod(METHOD_TYPE.GET, "/eregister-service/course/get-courses-of-student", a
       courseName: "Data Structure and Algorithms",
       limit: 1,
       teacher: "Edsger Dijkstra",
-      description: "asdsa asdoasd fdjdjf"
+      description: "asdsa asdoasd fdjdjf",
+      image: "data-structure-and-algorithm.png"
     }
   ]
   res.status(200).send(result)

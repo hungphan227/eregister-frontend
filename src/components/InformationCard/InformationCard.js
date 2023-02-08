@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from '../Button'
 import './InformationCard.scss'
-import computerScience from '../../assets/images/computer-science.png'
 
 class InformationCard extends React.Component {
 
@@ -15,7 +14,7 @@ class InformationCard extends React.Component {
     return (
       <div className='information-card'>
         <div className='first-column'>
-          <img src={computerScience} className='image' alt='course icon'></img>
+          <img src={'images/'+(data.image?data.image:'computer-science.png')} className='image' alt='course icon'></img>
           <div>
             <Button name={buttonName} handleClick={handleClickButton} />
           </div>
