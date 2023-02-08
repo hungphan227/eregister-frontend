@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import InformationCard from '../components/InformationCard'
+import EmptyInformationCard from '../components/EmptyInformationCard'
 import Notification from '../components/Notification/Notification'
 import ConfirmPopup from '../components/ConfirmPopup'
 import service from '../service/Service'
@@ -75,6 +76,7 @@ class MyCourses extends React.Component {
   }
 
   renderInformationCards() {
+    if (this.state.courses.length === 0) return <EmptyInformationCard></EmptyInformationCard>
     return (
       <div>
         {

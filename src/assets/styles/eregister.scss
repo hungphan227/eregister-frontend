@@ -13,22 +13,29 @@
   border-bottom: 1px solid #e6e6e6;
 
   .header-logo {
+    width: 7%;
     border-right: 1px solid #e6e6e6;
     padding-right: 10px;
     cursor: pointer;
   }
 
-  .header-button {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333333;
-    margin-left: 30px;
-    cursor: pointer;
+  .header-button-list {
+    display: flex;
+    margin-top: 2px;
+
+    .header-button {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333333;
+      margin-left: 30px;
+      cursor: pointer;
+    }
   }
 
   .header-logout {
     color: #333333;
     margin-left: auto;
+    margin-top: 2px;
     cursor: pointer;
   }
 }

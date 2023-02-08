@@ -22,10 +22,12 @@ class Header extends React.Component {
     return(
       <div className='header'>
         <img src='images/eregister.png' alt='logo' className='header-logo' onClick={this.handleClickEregisterLogo} />
-        <div className='header-button' onClick={this.handleClickMyCourses} >My Lessons</div>
-        <div className='header-button'>Find Teacher</div>
-        <div className='header-button'>Messages</div>
-        <div className='header-button'>Settings</div>
+        <div className='header-button-list'>
+          <div className='header-button' onClick={this.handleClickMyCourses} >My Lessons</div>
+          <div className='header-button'>Find Teacher</div>
+          <div className='header-button'>Messages</div>
+          <div className='header-button'>Settings</div>
+        </div>
         <Logout32 className='header-logout' onClick={this.handleClickLogout} />
       </div>
     )

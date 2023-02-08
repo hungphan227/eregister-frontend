@@ -38,6 +38,16 @@ addMethod(METHOD_TYPE.GET, "/eregister-service/courses", async (req, res) => {
       teacher: "Edsger Dijkstra",
       description: "asdsa asdoasd fdjdjf",
       image: "data-structure-and-algorithm.png"
+    },
+    {
+      id: 2,
+      courseNumber: "OOP",
+      courseName: "Object Oriented Programming",
+      limit: 4,
+      remainingSlots: 1,
+      teacher: "James Gosling",
+      description: "asdsa asdoasd fdjdjf",
+      image: "object-oriented-programming.png"
     }
   ]
   res.status(200).send(result)
